@@ -19,7 +19,7 @@
 ### 1. 安装
 
 ```
-npm  install vue3-cron-plus @element-plus/icons-vue
+npm  install cron-plugs @element-plus/icons-vue
 ```
 
 ### 2. 引入
@@ -29,8 +29,8 @@ npm  install vue3-cron-plus @element-plus/icons-vue
 - 2. 全局引入
 
 ```javascript
-import cron-plugs from 'vue3-cron-plus'
-import 'vue3-cron-plus/dist/index.css' // 引入样式
+import cron-plugs from 'cron-plugs'
+import 'cron-plugs/dist/index.css' // 引入样式
 const app = createApp(App)
 app.use(cron-plugs)
 ```
@@ -38,8 +38,8 @@ app.use(cron-plugs)
 - 3. 局部引入
 
 ```javascript
-import { cron-plugs } from 'vue3-cron-plus'
-import 'vue3-cron-plus/dist/index.css' // 引入样式
+import { cron-plugs } from 'cron-plugs'
+import 'cron-plugs/dist/index.css' // 引入样式
 export default {
   template: '<cron-plugs/>',
   components: { cron-plugs },
@@ -69,7 +69,7 @@ export default {
 
   - 参数 `{String} height`
 
-  设定 vue3-cron-plus 的 max-height, 默认没有该属性
+  设定 cron-plugs 的 max-height, 默认没有该属性
 
 #### 2. 事件
 
@@ -86,13 +86,13 @@ export default {
   当点击 corn 表达式选择框取消按钮时触发
 
 ### 5. 查看例子
-- clone项目到本地：Github地址: https://github.com/ElvaGao/vue3-cron-plus.git
+- clone项目到本地：Github地址: https://github.com/ElvaGao/cron-plugs.git
 - npm install，
 - npm run serve
 
 ## 联系方式
 
-邮箱 : elvasgao@126.com, Github: https://github.com/ElvaGao/vue3-cron-plus.git
+邮箱 : elvasgao@126.com, Github: https://github.com/ElvaGao/cron-plugs.git
 
 如果对您有帮助, 欢迎 star
 

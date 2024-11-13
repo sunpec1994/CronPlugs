@@ -1,5 +1,5 @@
 <template>
-    <div class="vue3-cron-plus-container">
+    <div class="cron-plugs-container">
         <el-button class="language" link size="small" type="primary"
             @click="state.language = state.language === 'en' ? 'zh' : 'en'">{{
                 state.language === 'en' ? 'zh' : 'en'

@@ -567,28 +567,28 @@ export default defineComponent({
             emit('change', state.cron);
             close();
         };
-        const rest = data => {
-            for (const i in data) {
-                if (data[i] instanceof Object) {
-                    this.rest(data[i]);
-                } else {
-                    switch (typeof data[i]) {
-                        case 'object':
-                            data[i] = [];
-                            break;
-                        case 'string':
-                            data[i] = '';
-                            break;
-                    }
-                }
-            }
-        };
+        // const rest = data => {
+        //     for (const i in data) {
+        //         if (data[i] instanceof Object) {
+        //             this.rest(data[i]);
+        //         } else {
+        //             switch (typeof data[i]) {
+        //                 case 'object':
+        //                     data[i] = [];
+        //                     break;
+        //                 case 'string':
+        //                     data[i] = '';
+        //                     break;
+        //             }
+        //         }
+        //     }
+        // };
         return {
             state,
             getValue,
             close,
             handleChange,
-            rest
+            // rest
         };
     }
 });

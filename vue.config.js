@@ -1,4 +1,5 @@
 const { defineConfig } = require('@vue/cli-service')
+const { DefinePlugin } = require('webpack')
 const path = require('path')
 
 module.exports = defineConfig({
@@ -10,14 +11,20 @@ module.exports = defineConfig({
         vue: path.resolve('./node_modules/vue')
       }
     },
+    plugins: [
+      new DefinePlugin({
+        __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false
+      })
+    ]
+
   },
   pages: {
     index: {
-        entry: "packages/examples/main.js",
-        template: "public/index.html",
-        filename: "index.html"
+      entry: "packages/examples/main.js",
+      template: "public/index.html",
+      filename: "index.html"
     }
-},
+  },
   transpileDependencies: false,
   publicPath: process.env.NODE_ENV === 'production' ? './' : './', // 开发环境与生产环境的区分
   // 扩展 webpack 配置，使 packages 加入编译
@@ -26,7 +33,7 @@ module.exports = defineConfig({
       .rule('eslint')
       .exclude.add(path.resolve('lib'))
       .end()
-      
+
     config.module
       .rule('js')
       .include

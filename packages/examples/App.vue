@@ -1,6 +1,6 @@
-<template>
+ <template>
   <div class="cron">
-    <h1>vue3-cron-plus例子</h1>
+    <h1>cron-plus例子</h1>
     <el-popover :visible="state.cronPopover" width="600px">
       <vue3CronPlus
         i18n="zh"

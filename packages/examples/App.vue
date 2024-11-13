@@ -1,7 +1,7 @@
 <template>
   <div class="cron">
     <h1>cron-plus例子</h1>
-    <el-popover :visible="state.cronPopover" width="600">
+    <el-popover :visible="state.cronPopover" width="650">
       <cron-plugs i18n="zh" @change="changeCron" @close="state.cronPopover = false" max-height="200px" />
       <template #reference>
         <el-input @click="state.cronPopover = true" v-model="state.cron" placeholder="请选择cron表达式"></el-input>
@@ -22,9 +22,6 @@ export default defineComponent({
     const changeCron = (val) => {
       if (typeof (val) !== 'string') return false
       state.cron = val
-    }
-    const togglePopover = (bol) => {
-      state.cronPopover = bol
     }
     const debounce = (fn, delay) => {
       let timer = null;
@@ -47,7 +44,6 @@ export default defineComponent({
     return {
       state,
       changeCron,
-      togglePopover
     }
   }
 });

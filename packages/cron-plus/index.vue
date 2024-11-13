@@ -281,7 +281,7 @@
             </el-tab-pane>
         </el-tabs>
         <div class="bottom">
-            <el-tag type="info">
+            <el-tag type="info" class="info">
                 {{ state.cron }}
             </el-tag>
             <el-button type="primary" size="small" @click.stop="handleChange">{{ state.text.Save }}</el-button>

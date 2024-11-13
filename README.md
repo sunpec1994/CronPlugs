@@ -86,13 +86,13 @@ export default {
   当点击 corn 表达式选择框取消按钮时触发
 
 ### 5. 查看例子
-- clone项目到本地：Github地址: https://github.com/ElvaGao/cron-plugs.git
+- clone项目到本地：Github地址: https://github.com/sunpec1994/CronPlugs.git
 - npm install，
 - npm run serve
 
 ## 联系方式
 
-邮箱 : elvasgao@126.com, Github: https://github.com/ElvaGao/cron-plugs.git
+邮箱 : sun_vip19@163.com, Github: https://github.com/sunpec1994/CronPlugs.git
 
 如果对您有帮助, 欢迎 star
 

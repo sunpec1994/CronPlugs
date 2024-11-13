@@ -286,7 +286,7 @@
 import Language from './language';
 import { reactive, computed, toRefs, defineComponent } from 'vue';
 export default defineComponent({
-    name: 'Vue3CronPlus',
+    name: 'cron-plugs',
     props: {
         cronValue: {},
         i18n: {},

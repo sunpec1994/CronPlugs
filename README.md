@@ -29,32 +29,32 @@ npm  install vue3-cron-plus @element-plus/icons-vue
 - 2. 全局引入
 
 ```javascript
-import vue3CronPlus from 'vue3-cron-plus'
+import cron-plugs from 'vue3-cron-plus'
 import 'vue3-cron-plus/dist/index.css' // 引入样式
 const app = createApp(App)
-app.use(vue3CronPlus)
+app.use(cron-plugs)
 ```
 
 - 3. 局部引入
 
 ```javascript
-import { vue3CronPlus } from 'vue3-cron-plus'
+import { cron-plugs } from 'vue3-cron-plus'
 import 'vue3-cron-plus/dist/index.css' // 引入样式
 export default {
-  template: '<vue3CronPlus/>',
-  components: { vue3CronPlus },
+  template: '<cron-plugs/>',
+  components: { cron-plugs },
 }
 ```
 
 ### 3. 使用
 
 ```vue
-<vue3CronPlus
+<cron-plugs
   @change="changeCron"
   @close="togglePopover(false)"
   max-height="400px"
   i18n="cn">
-</vue3CronPlus>
+</cron-plugs>
 ```
 
 ### 4. 参数

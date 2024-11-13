@@ -1,7 +1,7 @@
-import vue3CronPlus_ from "./index.vue";
+import cronPlugs_ from "./index.vue";
 import './index.css'
 
-const components = [vue3CronPlus_];
+const components = [cronPlugs_];
 
 const install = function(Vue) {
   components.map((component) => {
@@ -13,7 +13,7 @@ if (typeof window !== "undefined" && window.Vue) {
   install(window.Vue);
 }
 
-export const vue3CronPlus = vue3CronPlus_;
+export const cronPlugs = cronPlugs_;
 
 export default {
   install,

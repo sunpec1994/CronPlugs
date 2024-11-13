@@ -1,8 +1,8 @@
 <template>
     <div class="vue3-cron-plus-container">
         <el-button class="language" link size="small" type="primary"
-            @click="state.language = state.language === 'en' ? 'cn' : 'en'">{{
-                state.language === 'en' ? 'cn' : 'en'
+            @click="state.language = state.language === 'en' ? 'zh' : 'en'">{{
+                state.language === 'en' ? 'zh' : 'en'
             }}</el-button>
         <el-tabs type="border-card">
             <el-tab-pane>
@@ -274,16 +274,11 @@
             </el-tab-pane>
         </el-tabs>
         <div class="bottom">
-            <!-- <div class="value"> -->
-            <!-- <span> cron预览: </span> -->
             <el-tag type="info">
                 {{ state.cron }}
             </el-tag>
-            <!-- </div> -->
-            <!-- <div class="buttonDiv"> -->
             <el-button type="primary" size="small" @click.stop="handleChange">{{ state.text.Save }}</el-button>
             <el-button type="primary" size="small" @click="close">{{ state.text.Close }}</el-button>
-            <!-- </div> -->
         </div>
     </div>
 </template>
@@ -369,7 +364,7 @@ export default defineComponent({
                 Week: '',
                 year: ''
             },
-            text: computed(() => Language[state.language || 'cn']),
+            text: computed(() => Language[state.language || 'zh']),
             secondsText: computed(() => {
                 let seconds = '';
                 const cronEvery = state.second.cronEvery;

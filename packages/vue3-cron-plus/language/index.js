@@ -1,9 +1,9 @@
 import en from './en'
-import cn from './cn'
+import zh from './zh'
 import pt from './pt_br'
 
 export default {
     en,
-    cn,
+    zh,
     pt
 }

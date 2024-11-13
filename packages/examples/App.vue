@@ -3,7 +3,7 @@
     <h1>vue3-cron-plus例子</h1>
     <el-popover :visible="state.cronPopover" width="600px">
       <vue3CronPlus
-        i18n="cn"
+        i18n="zh"
         @change="changeCron"
         @close="state.cronPopover = false"
         max-height="200px"

@@ -27,7 +27,8 @@
                     <el-row>
                         <el-radio class="long" v-model="state.second.cronEvery" label="3">{{ state.text.Seconds.specific
                             }}
-                            <el-select size="small" multiple v-model="state.second.specificSpecific">
+                            <el-select size="small" multiple v-model="state.second.specificSpecific" collapse-tags
+                            collapse-tags-tooltip :max-collapse-tags="4">
                                 <el-option v-for="(val, index) in 60" :key="index" :value="val - 1">{{
                                     val - 1
                                     }}</el-option>
@@ -66,7 +67,8 @@
                     <el-row>
                         <el-radio class="long" v-model="state.minute.cronEvery" label="3">{{ state.text.Minutes.specific
                             }}
-                            <el-select size="small" multiple v-model="state.minute.specificSpecific">
+                            <el-select size="small" multiple v-model="state.minute.specificSpecific" collapse-tags
+                            collapse-tags-tooltip :max-collapse-tags="4">
                                 <el-option v-for="(val, index) in 60" :key="index" :value="val - 1">{{
                                     val - 1
                                     }}</el-option>
@@ -103,7 +105,8 @@
                     </el-row>
                     <el-row>
                         <el-radio class="long" v-model="state.hour.cronEvery" label="3">{{ state.text.Hours.specific }}
-                            <el-select size="small" multiple v-model="state.hour.specificSpecific">
+                            <el-select size="small" multiple v-model="state.hour.specificSpecific" collapse-tags
+                            collapse-tags-tooltip :max-collapse-tags="4">
                                 <el-option v-for="(val, index) in 24" :key="index" :value="val - 1">{{
                                     val - 1
                                     }}</el-option>
@@ -151,7 +154,8 @@
                     </el-row>
                     <el-row>
                         <el-radio class="long" v-model="state.day.cronEvery" label="4">{{ state.text.Day.specificWeek }}
-                            <el-select size="small" multiple v-model="state.week.specificSpecific">
+                            <el-select size="small" multiple v-model="state.week.specificSpecific" collapse-tags
+                            collapse-tags-tooltip :max-collapse-tags="4">
                                 <el-option v-for="(val, index) in 7" :key="index" :label="state.text.Week[val - 1]"
                                     :value="['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'][val - 1]" />
                             </el-select>
@@ -159,7 +163,8 @@
                     </el-row>
                     <el-row>
                         <el-radio class="long" v-model="state.day.cronEvery" label="5">{{ state.text.Day.specificDay }}
-                            <el-select size="small" multiple v-model="state.day.specificSpecific">
+                            <el-select size="small" multiple v-model="state.day.specificSpecific" collapse-tags
+                            collapse-tags-tooltip :max-collapse-tags="4">
                                 <el-option v-for="(val, index) in 31" :key="index" :value="val">{{ val }}</el-option>
                             </el-select>
                         </el-radio>
@@ -224,7 +229,8 @@
                     </el-row>
                     <el-row>
                         <el-radio class="long" v-model="state.month.cronEvery" label="3">{{ state.text.Month.specific }}
-                            <el-select size="small" multiple v-model="state.month.specificSpecific">
+                            <el-select size="small" multiple v-model="state.month.specificSpecific" collapse-tags
+                            collapse-tags-tooltip :max-collapse-tags="4">
                                 <el-option v-for="(val, index) in 12" :key="index" :label="val" :value="val" />
                             </el-select>
                         </el-radio>
@@ -257,7 +263,8 @@
                     </el-row>
                     <el-row>
                         <el-radio class="long" v-model="state.year.cronEvery" label="3">{{ state.text.Year.specific }}
-                            <el-select size="small" filterable multiple v-model="state.year.specificSpecific">
+                            <el-select size="small" filterable multiple v-model="state.year.specificSpecific" collapse-tags
+                            collapse-tags-tooltip :max-collapse-tags="4">
                                 <el-option v-for="(val, index) in 100" :key="index" :label="2017 + val"
                                     :value="2017 + val" />
                             </el-select>

@@ -2,7 +2,7 @@
   <div class="cron">
     <h1>cron-plus例子</h1>
     <el-popover :visible="state.cronPopover" width="650">
-      <cron-plugs i18n="zh" @change="changeCron" @close="state.cronPopover = false" max-height="200px" />
+      <cronPlugs i18n="zh" @change="changeCron" @close="state.cronPopover = false" max-height="200px" />
       <template #reference>
         <el-input @click="state.cronPopover = true" v-model="state.cron" placeholder="请选择cron表达式"></el-input>
       </template>
@@ -12,8 +12,13 @@
 
 <script>
 import { reactive, defineComponent } from 'vue'
+import { cronPlugs } from '../cron-plus/index'
+import '../cron-plus/index.css'
 export default defineComponent({
   name: "App",
+  components: {
+    cronPlugs
+  },
   setup() {
     const state = reactive({
       cronPopover: false,

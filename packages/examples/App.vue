@@ -1,12 +1,13 @@
  <template>
   <div class="cron">
     <h1>cron-plus例子</h1>
-    <el-popover :visible="state.cronPopover" width="600px">
+    <el-popover :visible="state.cronPopover">
       <vue3CronPlus
         i18n="zh"
         @change="changeCron"
         @close="state.cronPopover = false"
         max-height="200px"
+        width="1200"
       />
       <template #reference>
         <el-input

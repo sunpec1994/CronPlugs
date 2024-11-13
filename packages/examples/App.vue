@@ -12,12 +12,12 @@
 
 <script>
 import { reactive, defineComponent } from 'vue'
-// import { cronPlugs } from '../cron-plus/index'
+import { cronPlugs } from '../cron-plus/index'
 import '../cron-plus/index.css'
 
 export default defineComponent({
   name: "App",
-  // components: { cronPlugs },
+  components: { cronPlugs },
   setup() {
     const state = reactive({
       cronPopover: false,

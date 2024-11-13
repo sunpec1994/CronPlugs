@@ -29,20 +29,20 @@ npm  install cron-plugs @element-plus/icons-vue
 - 2. 全局引入
 
 ```javascript
-import cron-plugs from 'cron-plugs'
+import cronPlugs from 'cron-plugs'
 import 'cron-plugs/dist/index.css' // 引入样式
 const app = createApp(App)
-app.use(cron-plugs)
+app.use(cronPlugs)
 ```
 
 - 3. 局部引入
 
 ```javascript
-import { cron-plugs } from 'cron-plugs'
+import { cronPlugs } from 'cron-plugs'
 import 'cron-plugs/dist/index.css' // 引入样式
 export default {
   template: '<cron-plugs/>',
-  components: { cron-plugs },
+  components: { cronPlugs },
 }
 ```
 

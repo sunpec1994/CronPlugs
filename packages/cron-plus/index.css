@@ -44,10 +44,10 @@
   align-items: center;
   justify-content: center;
 }
-.cron-plugs-container .el-tag.el-tag--info{
+/* .cron-plugs-container .el-tag.el-tag--info{
   margin-left: -60px;
   margin-right: 12px;
-}
+} */
 /* .cron-plugs-container .bottom .value {
   float: left;
   font-size: 14px;

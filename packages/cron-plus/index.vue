@@ -1,9 +1,9 @@
 <template>
     <div class="cron-plugs-container">
-        <el-button class="language" link size="small" type="primary"
+        <!-- <el-button class="language" link size="small" type="primary"
             @click="state.language = state.language === 'en' ? 'zh' : 'en'">{{
                 state.language === 'en' ? 'zh' : 'en'
-            }}</el-button>
+            }}</el-button> -->
         <el-tabs type="border-card">
             <el-tab-pane>
                 <template #label>

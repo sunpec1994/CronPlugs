@@ -2,7 +2,7 @@
   <div class="cron">
     <h1>cron-plus例子</h1>
     <el-popover :visible="state.cronPopover" width="600">
-      <cron-plugs i18n="zh" @change="changeCron" @close="state.cronPopover = false" max-height="200px" />
+      <cron-plugs i18n="en" @change="changeCron" @close="state.cronPopover = false" max-height="200px" />
       <template #reference>
         <el-input @click="state.cronPopover = true" v-model="state.cron" placeholder="请选择cron表达式"></el-input>
       </template>
@@ -26,24 +26,24 @@ export default defineComponent({
     const togglePopover = (bol) => {
       state.cronPopover = bol
     }
-    // const debounce = (fn, delay) => {
-    //   let timer = null;
-    //   return function () {
-    //     let context = this;
-    //     let args = arguments;
-    //     clearTimeout(timer);
-    //     timer = setTimeout(function () {
-    //       fn.apply(context, args);
-    //     }, delay);
-    //   };
-    // };
-    // const _ResizeObserver = window.ResizeObserver;
-    // window.ResizeObserver = class ResizeObserver extends _ResizeObserver {
-    //   constructor(callback) {
-    //     callback = debounce(callback, 16);
-    //     super(callback);
-    //   }
-    // };
+    const debounce = (fn, delay) => {
+      let timer = null;
+      return function () {
+        let context = this;
+        let args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+          fn.apply(context, args);
+        }, delay);
+      };
+    };
+    const _ResizeObserver = window.ResizeObserver;
+    window.ResizeObserver = class ResizeObserver extends _ResizeObserver {
+      constructor(callback) {
+        callback = debounce(callback, 16);
+        super(callback);
+      }
+    };
     return {
       state,
       changeCron,

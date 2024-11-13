@@ -19,7 +19,7 @@
 ### 1. 安装
 
 ```
-npm  install cron-plugs @element-plus/icons-vue
+npm i cron-plus
 ```
 
 ### 2. 引入

@@ -3,7 +3,6 @@ const { DefinePlugin } = require('webpack')
 const path = require('path')
 
 module.exports = defineConfig({
-  // 解决打包出来还有vue实例的问题
   configureWebpack: {
     resolve: {
       symlinks: false,
@@ -17,6 +16,8 @@ module.exports = defineConfig({
       })
     ]
   },
+  filenameHashing: false,
+  productionSourceMap: false,
   pages: {
     index: {
       entry: "packages/examples/main.js",

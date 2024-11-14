@@ -2,7 +2,7 @@
   <div class="cron">
     <h1>cron-plus例子</h1>
     <el-popover :visible="state.cronPopover" width="650">
-      <cronPlugs i18n="zh" @change="changeCron" @close="state.cronPopover = false" max-height="200px" />
+      <cronPlugs i18n="en" @change="changeCron" @close="state.cronPopover = false" max-height="200px" />
       <template #reference>
         <el-input @click="state.cronPopover = true" v-model="state.cron" placeholder="请选择cron表达式"></el-input>
       </template>

@@ -4,7 +4,6 @@ const path = require('path')
 module.exports = defineConfig({
   filenameHashing: false,
   productionSourceMap: false,
-  // 解决打包出来还有vue实例的问题
   configureWebpack: {
     resolve: {
       symlinks: false,
@@ -21,7 +20,6 @@ module.exports = defineConfig({
     }
   },
   transpileDependencies: false,
-  // 扩展 webpack 配置，使 packages 加入编译
   chainWebpack: config => {
     config.module
       .rule('eslint')
@@ -37,9 +35,15 @@ module.exports = defineConfig({
       .end()
       .use('babel')
       .loader('babel-loader')
-      .tap(options => {
-        // 修改它的选项...
-        return options
+
+    config.plugin('define')
+      .tap((definitions) => {
+        Object.assign(definitions[0], {
+          __VUE_OPTIONS_API__: 'true',
+          __VUE_PROD_DEVTOOLS__: 'false',
+          __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: 'false'
+        })
+        return definitions
       })
-  },
+  }
 })

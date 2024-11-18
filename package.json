@@ -3,7 +3,7 @@
   "version": "0.0.8",
   "description": "Corn expression plugin based on vue3+elementPlus（基于vue3+element plus+vue3-cron的corn表达式插件）",
   "private": false,
-  "main": "index.js",
+  "main": "./dist/index.umd.min.js",
   "files": [
     "dist"
   ],
